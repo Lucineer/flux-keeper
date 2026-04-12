@@ -1,0 +1,8 @@
+[package]
+name = "flux-keeper"
+version = "0.1.0"
+edition = "2021"
+description = "Health monitoring, stuck detection, watchdog — the guardian of agent uptime"
+
+[dependencies]
+rand = "0.8"
