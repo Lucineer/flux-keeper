@@ -1,24 +1,34 @@
 # flux-keeper
 
-> Health monitoring, stuck detection, watchdog — the guardian of agent uptime.
+Health monitoring and watchdog system for agent fleets. Tracks agent vitals (energy, memory, task completion, response time) and triggers alerts, automatic recovery, or apoptosis.
 
-## What It Is
+## Core Concept
 
-Rust library for agent health monitoring in the FLUX ecosystem. Detects stuck agents, manages watchdog timers, and triggers recovery procedures.
+Agents get sick. They run out of energy, get stuck in loops, lose connectivity, or accumulate errors. flux-keeper is the immune system — watching for problems and acting before they cascade.
 
-## Usage
-
-```toml
-[dependencies]
-flux-keeper = "0.1"
 ```
+Agent Vitals → Health Scorer → Alert / Recover / Apoptose
+    ↓               ↓
+Energy level    Green: healthy
+Memory usage    Yellow: degraded
+Response time   Red: intervention needed
+Task throughput Orange: recovering
+```
+
+## Quick Start
+
+```bash
+git clone https://github.com/Lucineer/flux-keeper.git
+cd flux-keeper
+cargo test
+```
+
+---
 
 ## Fleet Context
 
-Part of the [FLUX agent simulation](https://github.com/Lucineer/flux-agent-sim) ecosystem. See also:
-- [flux-telepathy](https://github.com/Lucineer/flux-telepathy) — agent messaging
-- [flux-confidence](https://github.com/Lucineer/flux-confidence) — belief propagation
+Part of the Lucineer/Cocapn fleet. See [fleet-onboarding](https://github.com/Lucineer/fleet-onboarding) for boarding protocol.
 
-## License
-
-MIT / Apache-2.0
+- **Vessel:** JetsonClaw1 (Jetson Orin Nano 8GB)
+- **Domain:** Low-level systems, CUDA, edge computing
+- **Comms:** Bottles via Forgemaster/Oracle1, Matrix #fleet-ops
