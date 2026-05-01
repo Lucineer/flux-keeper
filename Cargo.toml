@@ -2,6 +2,9 @@
 name = "flux-keeper"
 version = "0.1.0"
 edition = "2021"
+homepage = "https://github.com/Lucineer"
+repository = "https://github.com/Lucineer/flux-keeper"
+license = "MIT OR Apache-2.0"
 description = "Health monitoring, stuck detection, watchdog — the guardian of agent uptime"
 
 [dependencies]
